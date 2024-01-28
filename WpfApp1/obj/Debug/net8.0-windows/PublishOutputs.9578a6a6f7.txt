@@ -1,0 +1,16 @@
+C:\Users\34876\Desktop\管理系统\WpfApp1.exe
+C:\Users\34876\Desktop\管理系统\WpfApp1.dll
+C:\Users\34876\Desktop\管理系统\WpfApp1.deps.json
+C:\Users\34876\Desktop\管理系统\WpfApp1.runtimeconfig.json
+C:\Users\34876\Desktop\管理系统\WpfApp1.pdb
+C:\Users\34876\Desktop\管理系统\BouncyCastle.Cryptography.dll
+C:\Users\34876\Desktop\管理系统\Enums.NET.dll
+C:\Users\34876\Desktop\管理系统\MathNet.Numerics.dll
+C:\Users\34876\Desktop\管理系统\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\34876\Desktop\管理系统\NPOI.Core.dll
+C:\Users\34876\Desktop\管理系统\NPOI.OOXML.dll
+C:\Users\34876\Desktop\管理系统\NPOI.OpenXml4Net.dll
+C:\Users\34876\Desktop\管理系统\NPOI.OpenXmlFormats.dll
+C:\Users\34876\Desktop\管理系统\ICSharpCode.SharpZipLib.dll
+C:\Users\34876\Desktop\管理系统\SixLabors.Fonts.dll
+C:\Users\34876\Desktop\管理系统\SixLabors.ImageSharp.dll
