@@ -1,0 +1,16 @@
+F:\WpfApp1.exe
+F:\WpfApp1.dll
+F:\WpfApp1.deps.json
+F:\WpfApp1.runtimeconfig.json
+F:\WpfApp1.pdb
+F:\BouncyCastle.Cryptography.dll
+F:\Enums.NET.dll
+F:\MathNet.Numerics.dll
+F:\Microsoft.IO.RecyclableMemoryStream.dll
+F:\NPOI.Core.dll
+F:\NPOI.OOXML.dll
+F:\NPOI.OpenXml4Net.dll
+F:\NPOI.OpenXmlFormats.dll
+F:\ICSharpCode.SharpZipLib.dll
+F:\SixLabors.Fonts.dll
+F:\SixLabors.ImageSharp.dll

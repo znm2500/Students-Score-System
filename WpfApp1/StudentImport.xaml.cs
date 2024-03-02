@@ -80,7 +80,12 @@ namespace WpfApp1
                 gro.SetAttribute("rank", "1");
                 gro.SetAttribute("id", n);
                 root.AppendChild(gro);
-                foreach(var s in sts)
+                var pu = xmlDoc.CreateElement("Student");
+                pu.SetAttribute("name", "公共");
+                pu.SetAttribute("score", "0");
+                pu.SetAttribute("record", "");
+                gro.AppendChild(pu);
+                foreach (var s in sts)
                 {
                     if (i  == s.group)
                     {

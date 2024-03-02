@@ -81,6 +81,9 @@ namespace WpfApp1
                         {
                             if (st.name == name)
                             {
+
+                                st.all_exam_score = float.Parse(sheet.GetRow(i).GetCell(5).StringCellValue);
+                            
                                 for (int j = 0; j < 6; j++)
                                 {
                                     single = sheet.GetRow(i).GetCell(10 + j * 3).StringCellValue;
@@ -91,10 +94,13 @@ namespace WpfApp1
                                     }
                                 }
                                 st.AfterExam();
+                                break;
                             }
                         }
                     }
                 }
+              
+                ag.rankingscore();
             }
 
             foreach (var i in ag.Groups)

@@ -1022,11 +1022,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+      "projectUniqueName": "E:\\GitHub\\Students-Score-System\\WpfApp1\\WpfApp1.csproj",
       "projectName": "WpfApp1",
-      "projectPath": "E:\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+      "projectPath": "E:\\GitHub\\Students-Score-System\\WpfApp1\\WpfApp1.csproj",
       "packagesPath": "C:\\Users\\34876\\.nuget\\packages\\",
-      "outputPath": "E:\\WpfApp1\\WpfApp1\\obj\\",
+      "outputPath": "E:\\GitHub\\Students-Score-System\\WpfApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -27,6 +27,7 @@
                 <DataGridTextColumn Header="加分记录"  Binding="{Binding record}" Width="750" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Content="小组排名"  Width="80" Height="30"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="240,0,0,0" Click="Button_Click_3"/>
 
 
     </Grid>

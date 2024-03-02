@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2UsnJyiXHjiYsK271HPNAbJFvj63k92UBVmTedM6URedzSVBt4zTYBFBWf1jez/lNEIyY4LtsUvkfhWVntim+g==",
+  "dgSpecHash": "78z/Cwm1PPuYzKpTgqctTEYaoHCTSMaxiMIvPFeh9qPTnpDvnVUu5YqznRkBPx4cMWTKRCjjAjAgZckvM6/QXw==",
   "success": true,
-  "projectFilePath": "E:\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "projectFilePath": "E:\\GitHub\\Students-Score-System\\WpfApp1\\WpfApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\34876\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\34876\\.nuget\\packages\\enums.net\\4.0.1\\enums.net.4.0.1.nupkg.sha512",

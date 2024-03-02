@@ -30,6 +30,7 @@ namespace WpfApp1
         public string name { get; set; }
         public float change { get; set; }
         public string reason;
+        public float all_exam_score { get; set; }
         public string record { get; set; } = "";
         // public int group;
         public int[] examrank = new int[6];
@@ -113,22 +114,31 @@ namespace WpfApp1
         public List<Student> Students = new List<Student>();
         public int rank { get; set; }
         public float totalscore;
+        public double total_exam_score;
         public void TotalScore()
         {
-
+            totalscore = 0f;
             foreach (var s in Students)
             {
                 totalscore += s.score;
             }
             return;
         }
+        public void TotalExamScore()
+        {
+
+            foreach (var s in Students)
+            {
+                total_exam_score += s.all_exam_score;
+            }
+            return;
+        }
         public Group(int i, int r)
         {
             id = i;
-            rank = r;
-
-            
+            rank = r; 
         }
+        
     }
     public class AllGroup
     {
@@ -145,6 +155,54 @@ namespace WpfApp1
                 Groups[i].rank = i + 1;
 
             }
+        }
+        public void rankingscore()
+        {
+            foreach (var gp in Groups) { gp.TotalExamScore();}
+             Groups.Sort((b, a) => a.total_exam_score.CompareTo(b.total_exam_score));
+            
+                for (int i = 1; i <= 8; i++)
+                {
+                    if (i == 1 || i == 2)
+                    {
+                        foreach (var s in Groups[i - 1].Students)
+                        {
+                            if (s.name == "公共")
+                            {
+                                s.score = 3;
+                                break;
+                            }
+                        }
+
+                    }
+                    else if (i >= 3 && i <= 5)
+                    {
+                        foreach (var s in Groups[i - 1].Students)
+                        {
+                            if (s.name == "公共")
+                            {
+                                s.score = 2;
+                                break;
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        foreach (var s in Groups[i-1].Students)
+                        {
+                            if (s.name == "公共")
+                            {
+                                s.score = 1;
+                                break;
+                            }
+                        }
+
+                    }
+                }
+            
+
+        
         }
         public AllGroup()
         {
@@ -174,7 +232,7 @@ namespace WpfApp1
                     Groups[i].Students.Add(st);
                     Groups[i].TotalScore();
                 }
-
+                
 
             }
 
@@ -291,6 +349,10 @@ namespace WpfApp1
             Load();
         }
 
-      
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            string str = String.Format($"第一名：第{ag.Groups[0].id}组 {ag.Groups[0].totalscore}分\n第二名：第{ag.Groups[1].id}组 {ag.Groups[1].totalscore}分\n第三名：第{ag.Groups[2].id}组 {ag.Groups[2].totalscore}分\n第四名：第{ag.Groups[3].id}组 {ag.Groups[3].totalscore}分\n第五名：第{ag.Groups[4].id}组 {ag.Groups[4].totalscore}分\n第六名：第{ag.Groups[5].id}组 {ag.Groups[5].totalscore}分\n第七名：第{ag.Groups[6].id}组 {ag.Groups[6].totalscore}分\n第八名：第{ag.Groups[7].id}组 {ag.Groups[7].totalscore}分");
+            MessageBox.Show(str);
+        }
     }
 }

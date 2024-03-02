@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\WpfApp1\WpfApp1\obj\Release\net8.0-windows\
+E:\GitHub\Students-Score-System\WpfApp1\obj\Release\net8.0-windows\
 WpfApp1
 none
 false
 TRACE;RELEASE;NET;NET8_0;NETCOREAPP
-E:\WpfApp1\WpfApp1\App.xaml
+E:\GitHub\Students-Score-System\WpfApp1\App.xaml
 51284135618
 
 10-390981931
 2101495072199
 Change.xaml;Exam.xaml;Import.xaml;MainWindow.xaml;StudentImport.xaml;
 
-True
+False
 
