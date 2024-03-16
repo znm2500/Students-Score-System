@@ -126,7 +126,7 @@ namespace WpfApp1
         }
         public void TotalExamScore()
         {
-
+            total_exam_score = 0;
             foreach (var s in Students)
             {
                 total_exam_score += s.all_exam_score;
@@ -235,12 +235,12 @@ namespace WpfApp1
                 
 
             }
-
+            Ranking();
 
         }
         public void Save()
         {
-            Ranking();
+            
             XmlDocument xmlDoc = new XmlDocument();
             var root = xmlDoc.CreateElement("Groups");
             xmlDoc.AppendChild(root);
@@ -278,6 +278,7 @@ namespace WpfApp1
         {
             AllGroup al = new AllGroup();
             List<Student> students = new List<Student>();
+            
             foreach (var i in al.Groups)
             {
                 students.AddRange(i.Students);
@@ -351,6 +352,7 @@ namespace WpfApp1
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            ag.Ranking();
             string str = String.Format($"第一名：第{ag.Groups[0].id}组 {ag.Groups[0].totalscore}分\n第二名：第{ag.Groups[1].id}组 {ag.Groups[1].totalscore}分\n第三名：第{ag.Groups[2].id}组 {ag.Groups[2].totalscore}分\n第四名：第{ag.Groups[3].id}组 {ag.Groups[3].totalscore}分\n第五名：第{ag.Groups[4].id}组 {ag.Groups[4].totalscore}分\n第六名：第{ag.Groups[5].id}组 {ag.Groups[5].totalscore}分\n第七名：第{ag.Groups[6].id}组 {ag.Groups[6].totalscore}分\n第八名：第{ag.Groups[7].id}组 {ag.Groups[7].totalscore}分");
             MessageBox.Show(str);
         }

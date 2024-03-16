@@ -26,13 +26,13 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
-      
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "选择excel文件";
-            openFileDialog.Filter = "excel文件|*.xlsx";
+            openFileDialog.Title = "选择成绩文件";
+            openFileDialog.Filter = "成绩|*.xlsx;*.txt";
 
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = false;
@@ -40,7 +40,9 @@ namespace WpfApp1
             openFileDialog.DefaultExt = "";
             if (openFileDialog.ShowDialog() == true)
             {
-                Exam si = new Exam(openFileDialog.FileName,true,1);
+                var s = openFileDialog.FileName.Split('.');
+               
+                Exam si = new Exam(openFileDialog.FileName, true,1, s[1] == "xlsx");
                 si.Owner = this;
                 si.ShowDialog();
 
@@ -52,8 +54,8 @@ namespace WpfApp1
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "选择excel文件";
-            openFileDialog.Filter = "excel文件|*.xlsx";
+            openFileDialog.Title = "选择成绩文件";
+            openFileDialog.Filter = "成绩|*.xlsx;*.txt";
 
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = false;
@@ -61,10 +63,12 @@ namespace WpfApp1
             openFileDialog.DefaultExt = "";
             if (openFileDialog.ShowDialog() == true)
             {
-                Exam si = new Exam(openFileDialog.FileName, false);
+                var s = openFileDialog.FileName.Split('.');
+
+                Exam si = new Exam(openFileDialog.FileName, false, 0, s[1] == "xlsx");
                 si.Owner = this;
                 si.ShowDialog();
-                
+
 
 
             }
@@ -81,8 +85,8 @@ namespace WpfApp1
         {
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "选择excel文件";
-            openFileDialog.Filter = "excel文件|*.xlsx";
+            openFileDialog.Title = "选择成绩文件";
+            openFileDialog.Filter = "成绩|*.xlsx;*.txt";
 
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = false;
@@ -90,7 +94,9 @@ namespace WpfApp1
             openFileDialog.DefaultExt = "";
             if (openFileDialog.ShowDialog() == true)
             {
-                Exam si = new Exam(openFileDialog.FileName, true, 0);
+                var s = openFileDialog.FileName.Split('.');
+
+                Exam si = new Exam(openFileDialog.FileName, true, 0, s[1] == "xlsx");
                 si.Owner = this;
                 si.ShowDialog();
 
@@ -103,8 +109,8 @@ namespace WpfApp1
         {
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "选择excel文件";
-            openFileDialog.Filter = "excel文件|*.xlsx";
+            openFileDialog.Title = "选择成绩文件";
+            openFileDialog.Filter = "成绩|*.xlsx;*.txt";
 
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = false;
@@ -112,7 +118,9 @@ namespace WpfApp1
             openFileDialog.DefaultExt = "";
             if (openFileDialog.ShowDialog() == true)
             {
-                Exam si = new Exam(openFileDialog.FileName, true, 2);
+                var s = openFileDialog.FileName.Split('.');
+
+                Exam si = new Exam(openFileDialog.FileName, true, 2, s[1] == "xlsx");
                 si.Owner = this;
                 si.ShowDialog();
 
@@ -124,8 +132,8 @@ namespace WpfApp1
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "选择excel文件";
-            openFileDialog.Filter = "excel文件|*.xlsx";
+            openFileDialog.Title = "选择成绩文件";
+            openFileDialog.Filter = "成绩|*.xlsx;*.txt";
 
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = false;
@@ -133,7 +141,9 @@ namespace WpfApp1
             openFileDialog.DefaultExt = "";
             if (openFileDialog.ShowDialog() == true)
             {
-                Exam si = new Exam(openFileDialog.FileName, true, 3);
+                var s = openFileDialog.FileName.Split('.');
+
+                Exam si = new Exam(openFileDialog.FileName, true, 3, s[1] == "xlsx");
                 si.Owner = this;
                 si.ShowDialog();
 
