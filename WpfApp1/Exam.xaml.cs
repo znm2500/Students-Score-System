@@ -190,6 +190,7 @@ namespace WpfApp1
                     
                 }
             }
+         
             foreach (var i in ag.Groups)
             {
                 students.AddRange(i.Students);
@@ -206,6 +207,7 @@ namespace WpfApp1
                 s.ChangeScore();
             }
             ag.Save();
+         
             MessageBox.Show("分数修改完毕！");
             Close();
         }

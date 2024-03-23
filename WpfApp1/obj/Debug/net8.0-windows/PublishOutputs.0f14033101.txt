@@ -1,4 +1,7 @@
 F:\管理系统\WpfApp1.exe
+F:\管理系统\selenium-manager\linux\selenium-manager
+F:\管理系统\selenium-manager\macos\selenium-manager
+F:\管理系统\selenium-manager\windows\selenium-manager.exe
 F:\管理系统\WpfApp1.dll
 F:\管理系统\WpfApp1.deps.json
 F:\管理系统\WpfApp1.runtimeconfig.json
@@ -7,10 +10,14 @@ F:\管理系统\BouncyCastle.Cryptography.dll
 F:\管理系统\Enums.NET.dll
 F:\管理系统\MathNet.Numerics.dll
 F:\管理系统\Microsoft.IO.RecyclableMemoryStream.dll
+F:\管理系统\Newtonsoft.Json.dll
 F:\管理系统\NPOI.Core.dll
 F:\管理系统\NPOI.OOXML.dll
 F:\管理系统\NPOI.OpenXml4Net.dll
 F:\管理系统\NPOI.OpenXmlFormats.dll
+F:\管理系统\ThoughtWorks.Selenium.Core.dll
+F:\管理系统\WebDriver.Support.dll
+F:\管理系统\WebDriver.dll
 F:\管理系统\ICSharpCode.SharpZipLib.dll
 F:\管理系统\SixLabors.Fonts.dll
 F:\管理系统\SixLabors.ImageSharp.dll

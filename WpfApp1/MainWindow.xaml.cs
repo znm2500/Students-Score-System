@@ -145,6 +145,7 @@ namespace WpfApp1
         public List<Group> Groups = new List<Group>();
         public void Ranking()
         {
+
             foreach (var gp in Groups)
             {
                 gp.TotalScore();
@@ -352,6 +353,7 @@ namespace WpfApp1
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            ag = Load();
             ag.Ranking();
             string str = String.Format($"第一名：第{ag.Groups[0].id}组 {ag.Groups[0].totalscore}分\n第二名：第{ag.Groups[1].id}组 {ag.Groups[1].totalscore}分\n第三名：第{ag.Groups[2].id}组 {ag.Groups[2].totalscore}分\n第四名：第{ag.Groups[3].id}组 {ag.Groups[3].totalscore}分\n第五名：第{ag.Groups[4].id}组 {ag.Groups[4].totalscore}分\n第六名：第{ag.Groups[5].id}组 {ag.Groups[5].totalscore}分\n第七名：第{ag.Groups[6].id}组 {ag.Groups[6].totalscore}分\n第八名：第{ag.Groups[7].id}组 {ag.Groups[7].totalscore}分");
             MessageBox.Show(str);

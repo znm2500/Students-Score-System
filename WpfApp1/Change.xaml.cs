@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,29 +29,37 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             bool ok = false;
-            string name = txt_name.Text;
-            float change = float.Parse(txt_change.Text);
-            string reason = txt_reason.Text;
+            int times = 0;
+            var names= txt_name.Text.Split('，');
+            var changes = txt_change.Text.Split("+");
+            var reasons = txt_reason.Text.Split("，");
             AllGroup ag = new AllGroup();
-            foreach (var group in ag.Groups)
-            {
+            
+                foreach (var group in ag.Groups)
+                {if (times == names.Length) break;
                 foreach (var student in group.Students)
                 {
-                    if (student.name == name)
+                    foreach (var name in names)
                     {
-                        student.change = change;
-                        student.reason = reason;
-                        student.ChangeScore();
-                        ok = true;
-                        break;
+                        if (student.name == name)
+                        {
+                            for(int i = 0; i < changes.Length; i++) {
+                                student.change = float.Parse(changes[i]);
+                                student.reason = reasons[i];
+                                student.ChangeScore();
+                            }
+                            times++;
+                            break;
+                        }
                     }
+                    
                 }
-                if(ok) { break; }
-            }
+                }
+           
             ag.Ranking();
             ag.Save();
 
-            if (ok) { MessageBox.Show("修改成功！"); }
+            if (times == names.Length) { MessageBox.Show("修改成功！"); }
             else { MessageBox.Show("该学生不存在！"); }
             txt_change.Clear();
             txt_name.Clear();
