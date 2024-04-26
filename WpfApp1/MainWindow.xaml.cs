@@ -1,8 +1,12 @@
 ﻿using Microsoft.Win32;
+using NPOI.SS.UserModel;
+using NPOI.SS.Util;
+using NPOI.XSSF.UserModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -357,6 +361,61 @@ namespace WpfApp1
             ag.Ranking();
             string str = String.Format($"第一名：第{ag.Groups[0].id}组 {ag.Groups[0].totalscore}分\n第二名：第{ag.Groups[1].id}组 {ag.Groups[1].totalscore}分\n第三名：第{ag.Groups[2].id}组 {ag.Groups[2].totalscore}分\n第四名：第{ag.Groups[3].id}组 {ag.Groups[3].totalscore}分\n第五名：第{ag.Groups[4].id}组 {ag.Groups[4].totalscore}分\n第六名：第{ag.Groups[5].id}组 {ag.Groups[5].totalscore}分\n第七名：第{ag.Groups[6].id}组 {ag.Groups[6].totalscore}分\n第八名：第{ag.Groups[7].id}组 {ag.Groups[7].totalscore}分");
             MessageBox.Show(str);
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            ag = Load();
+            ag.Ranking();
+            var workbook = new XSSFWorkbook();
+            var sheet=workbook.CreateSheet();
+            sheet.SetColumnWidth(0, 20 * 256);
+            var head=sheet.CreateRow(0);
+            var head_cell=head.CreateCell(0);
+            head_cell.SetCellValue("小组");
+            var head_cell1 = head.CreateCell(1);
+            head_cell1.SetCellValue("名字");
+            var head_cell2 = head.CreateCell(2);
+            head_cell2.SetCellValue("分数");
+            var head_cell3 = head.CreateCell(3);
+            head_cell3.SetCellValue("加分记录");
+            List<IRow>rows = new List<IRow>();
+            int i = 0;
+            for(var index= 1; index <= ag.Groups.Count;index++)
+            {
+                var temp = i;
+                for(var m=0;m< ag.Groups[index-1].Students.Count;m++)
+                {
+                    //MessageBox.Show(index.ToString());
+                    rows.Add(sheet.CreateRow(++i));
+                    var cells=new List<ICell>();
+                    for(var j=0;j<4;j++)
+                        cells.Add(rows[i - 1].CreateCell(j));
+              
+                    if (m==0) {
+
+                        cells[0].SetCellValue(string.Format($"第{index}组（{ag.Groups[index - 1].totalscore}分）"));
+                    }
+                    cells[1].SetCellValue(ag.Groups[index - 1].Students[m].name.ToString());
+                    cells[2].SetCellValue(ag.Groups[index - 1].Students[m].score.ToString());
+                    cells[3].SetCellValue(ag.Groups[index - 1].Students[m].record);
+                }
+                sheet.AddMergedRegion(new CellRangeAddress(temp+1, i, 0, 0));
+                temp = i;
+            }
+            
+            OpenFolderDialog dialog = new OpenFolderDialog();
+            dialog.Multiselect = true;
+            dialog.Title = "请选择文件夹";
+            if (dialog.ShowDialog()==true)
+            {
+                FileStream file = new FileStream(dialog.FolderName+"\\分数.xlsx", FileMode.Create);
+                workbook.Write(file);
+                MessageBox.Show("文件已导出！");
+
+            }
+
+           
         }
     }
 }

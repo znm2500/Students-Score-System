@@ -81,11 +81,3 @@ E:\GitHub\Students-Score-System\WpfApp1\obj\Debug\net8.0-windows\refint\WpfApp1.
 E:\GitHub\Students-Score-System\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.pdb
 E:\GitHub\Students-Score-System\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.genruntimeconfig.cache
 E:\GitHub\Students-Score-System\WpfApp1\obj\Debug\net8.0-windows\ref\WpfApp1.dll
-E:\GitHub\Students-Score-System\WpfApp1\bin\Debug\net8.0-windows\selenium-manager\linux\selenium-manager
-E:\GitHub\Students-Score-System\WpfApp1\bin\Debug\net8.0-windows\selenium-manager\macos\selenium-manager
-E:\GitHub\Students-Score-System\WpfApp1\bin\Debug\net8.0-windows\selenium-manager\windows\selenium-manager.exe
-E:\GitHub\Students-Score-System\WpfApp1\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
-E:\GitHub\Students-Score-System\WpfApp1\bin\Debug\net8.0-windows\ThoughtWorks.Selenium.Core.dll
-E:\GitHub\Students-Score-System\WpfApp1\bin\Debug\net8.0-windows\WebDriver.Support.dll
-E:\GitHub\Students-Score-System\WpfApp1\bin\Debug\net8.0-windows\WebDriver.dll
-E:\GitHub\Students-Score-System\WpfApp1\obj\Debug\net8.0-windows\WpfApp1_Content.g.cs
