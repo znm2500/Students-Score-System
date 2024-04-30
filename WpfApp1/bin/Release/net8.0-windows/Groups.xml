@@ -19,7 +19,47 @@
     <Student name="刘鑫" score="7" record="+1(1)+1(大道)+2(1)+3(企鹅)" />
     <Student name="朱金金" score="0" record="" />
   </Group>
-  <Group rank="3" id="5">
+  <Group rank="3" id="1">
+    <Student name="公共" score="0" record="" />
+    <Student name="唐华丹" score="2" record="+0.5(对抗赛)+1(对抗赛)+0.5(对抗赛)" />
+    <Student name="刘佳欣" score="0" record="" />
+    <Student name="周文财" score="2" record="+0.5(对抗赛)+1(对抗赛)+0.5(对抗赛)" />
+    <Student name="田雅涵" score="0" record="" />
+    <Student name="叶童" score="0" record="" />
+    <Student name="王淞" score="0" record="" />
+    <Student name="杜俊杰" score="0" record="" />
+  </Group>
+  <Group rank="4" id="6">
+    <Student name="公共" score="0" record="" />
+    <Student name="魏振坤" score="0" record="" />
+    <Student name="汤远堂" score="0" record="" />
+    <Student name="王航" score="2" record="+0.5(对抗赛)+1(对抗赛)+0.5(对抗赛)" />
+    <Student name="蒋柠" score="0" record="" />
+    <Student name="郑茹丹" score="0" record="" />
+    <Student name="林晨" score="0" record="" />
+    <Student name="杨诗博" score="0" record="" />
+  </Group>
+  <Group rank="5" id="3">
+    <Student name="公共" score="0" record="" />
+    <Student name="刘珍言" score="0" record="" />
+    <Student name="王婷2" score="0" record="" />
+    <Student name="周怡忛" score="2" record="+0.5(对抗赛)+1(对抗赛)+0.5(对抗赛)" />
+    <Student name="曹渝越" score="0" record="" />
+    <Student name="赵爽程" score="0" record="" />
+    <Student name="梁椿林" score="0" record="" />
+    <Student name="侯淼水" score="0" record="" />
+  </Group>
+  <Group rank="6" id="2">
+    <Student name="公共" score="0" record="" />
+    <Student name="吕承鸿" score="0" record="" />
+    <Student name="周钰浛" score="0" record="" />
+    <Student name="胡力文" score="0" record="" />
+    <Student name="段星宇" score="0" record="" />
+    <Student name="张福吉" score="2" record="+0.5(对抗赛)+1(对抗赛)+0.5(对抗赛)" />
+    <Student name="陈丽如" score="0" record="" />
+    <Student name="夏建梅" score="0" record="" />
+  </Group>
+  <Group rank="7" id="5">
     <Student name="公共" score="0" record="" />
     <Student name="唐煜" score="0" record="" />
     <Student name="张严" score="0" record="" />
@@ -38,45 +78,5 @@
     <Student name="李爽" score="0" record="" />
     <Student name="肖思涵" score="0" record="" />
     <Student name="王明磊" score="0" record="" />
-  </Group>
-  <Group rank="5" id="1">
-    <Student name="公共" score="0" record="" />
-    <Student name="唐华丹" score="0" record="" />
-    <Student name="刘佳欣" score="0" record="" />
-    <Student name="周文财" score="0" record="" />
-    <Student name="田雅涵" score="0" record="" />
-    <Student name="叶童" score="0" record="" />
-    <Student name="王淞" score="0" record="" />
-    <Student name="杜俊杰" score="0" record="" />
-  </Group>
-  <Group rank="6" id="6">
-    <Student name="公共" score="0" record="" />
-    <Student name="魏振坤" score="0" record="" />
-    <Student name="汤远堂" score="0" record="" />
-    <Student name="王航" score="0" record="" />
-    <Student name="蒋柠" score="0" record="" />
-    <Student name="郑茹丹" score="0" record="" />
-    <Student name="林晨" score="0" record="" />
-    <Student name="杨诗博" score="0" record="" />
-  </Group>
-  <Group rank="7" id="3">
-    <Student name="公共" score="0" record="" />
-    <Student name="刘珍言" score="0" record="" />
-    <Student name="王婷2" score="0" record="" />
-    <Student name="周怡忛" score="0" record="" />
-    <Student name="曹渝越" score="0" record="" />
-    <Student name="赵爽程" score="0" record="" />
-    <Student name="梁椿林" score="0" record="" />
-    <Student name="侯淼水" score="0" record="" />
-  </Group>
-  <Group rank="7" id="2">
-    <Student name="公共" score="0" record="" />
-    <Student name="吕承鸿" score="0" record="" />
-    <Student name="周钰浛" score="0" record="" />
-    <Student name="胡力文" score="0" record="" />
-    <Student name="段星宇" score="0" record="" />
-    <Student name="张福吉" score="0" record="" />
-    <Student name="陈丽如" score="0" record="" />
-    <Student name="夏建梅" score="0" record="" />
   </Group>
 </Groups>

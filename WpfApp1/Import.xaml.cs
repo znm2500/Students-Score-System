@@ -32,7 +32,7 @@ namespace WpfApp1
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "选择成绩文件";
-            openFileDialog.Filter = "成绩|*.xlsx;*.txt";
+            openFileDialog.Filter = "成绩|*.xlsx;*.txt;*.docx";
 
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = false;
@@ -42,7 +42,7 @@ namespace WpfApp1
             {
                 var s = openFileDialog.FileName.Split('.');
                
-                Exam si = new Exam(openFileDialog.FileName, true,1, s[1] == "xlsx");
+                Exam si = new Exam(openFileDialog.FileName, true,1, s[1] == "xlsx", s[1] == "docx");
                 si.Owner = this;
                 si.ShowDialog();
 
@@ -55,7 +55,7 @@ namespace WpfApp1
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "选择成绩文件";
-            openFileDialog.Filter = "成绩|*.xlsx;*.txt";
+            openFileDialog.Filter = "成绩|*.xlsx;*.txt;*.docx";
 
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = false;
@@ -65,7 +65,7 @@ namespace WpfApp1
             {
                 var s = openFileDialog.FileName.Split('.');
 
-                Exam si = new Exam(openFileDialog.FileName, false, 0, s[1] == "xlsx");
+                Exam si = new Exam(openFileDialog.FileName, false, 0, s[1] == "xlsx", s[1] == "docx");
                 si.Owner = this;
                 si.ShowDialog();
 
@@ -86,7 +86,7 @@ namespace WpfApp1
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "选择成绩文件";
-            openFileDialog.Filter = "成绩|*.xlsx;*.txt";
+            openFileDialog.Filter = "成绩|*.xlsx;*.txt;*.docx";
 
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = false;
@@ -96,7 +96,7 @@ namespace WpfApp1
             {
                 var s = openFileDialog.FileName.Split('.');
 
-                Exam si = new Exam(openFileDialog.FileName, true, 0, s[1] == "xlsx");
+                Exam si = new Exam(openFileDialog.FileName, true, 0, s[1] == "xlsx", s[1] == "docx");
                 si.Owner = this;
                 si.ShowDialog();
 
@@ -110,7 +110,7 @@ namespace WpfApp1
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "选择成绩文件";
-            openFileDialog.Filter = "成绩|*.xlsx;*.txt";
+            openFileDialog.Filter = "成绩|*.xlsx;*.txt;*.docx";
 
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = false;
@@ -120,7 +120,7 @@ namespace WpfApp1
             {
                 var s = openFileDialog.FileName.Split('.');
 
-                Exam si = new Exam(openFileDialog.FileName, true, 2, s[1] == "xlsx");
+                Exam si = new Exam(openFileDialog.FileName, true, 2, s[1] == "xlsx", s[1] == "docx");
                 si.Owner = this;
                 si.ShowDialog();
 
@@ -133,7 +133,7 @@ namespace WpfApp1
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "选择成绩文件";
-            openFileDialog.Filter = "成绩|*.xlsx;*.txt";
+            openFileDialog.Filter = "成绩|*.xlsx;*.txt;*.docx";
 
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = false;
@@ -143,7 +143,7 @@ namespace WpfApp1
             {
                 var s = openFileDialog.FileName.Split('.');
 
-                Exam si = new Exam(openFileDialog.FileName, true, 3, s[1] == "xlsx");
+                Exam si = new Exam(openFileDialog.FileName, true, 3, s[1] == "xlsx", s[1]=="docx");
                 si.Owner = this;
                 si.ShowDialog();
 
