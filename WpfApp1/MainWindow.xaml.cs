@@ -1,15 +1,19 @@
 ﻿using Microsoft.Win32;
+using NPOI.SS.Formula.Functions;
 using NPOI.SS.UserModel;
 using NPOI.SS.Util;
 using NPOI.XSSF.UserModel;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +24,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace WpfApp1
 {
@@ -38,13 +43,17 @@ namespace WpfApp1
         public string record { get; set; } = "";
         // public int group;
         public int[] examrank = new int[6];
-
+        public float[] examscore = new float[6];
+        public bool valid = true;
 
         public void AfterExam()
         {
+            change = 0;
             foreach (int i in examrank)
             {
-                if (i <= 3) { change += 3; }
+                
+                if (i == 0) { }
+                else if (i <= 3) { change += 3; }
                 else if (i <= 6) { change += 2; }
                 else if (i <= 10) { change += 1; }
             }
@@ -111,6 +120,13 @@ namespace WpfApp1
             score = s;
             name = n;
         }
+        
+    }
+    public class Data
+    {       
+            public int _start_row,_number,mz_row,zf_row,dl0,dl1,dl2,dl3,dl4,dl5;
+        
+   
     }
     public class Group
     {
@@ -119,6 +135,7 @@ namespace WpfApp1
         public int rank { get; set; }
         public float totalscore;
         public double total_exam_score;
+        int valid_num = 0;
         public void TotalScore()
         {
             totalscore = 0f;
@@ -131,10 +148,15 @@ namespace WpfApp1
         public void TotalExamScore()
         {
             total_exam_score = 0;
+            valid_num = 0;
             foreach (var s in Students)
             {
-                total_exam_score += s.all_exam_score;
+                if (s.valid) { total_exam_score += s.all_exam_score;
+                    valid_num++;
+                }
+                
             }
+            totalscore /= valid_num;
             return;
         }
         public Group(int i, int r)

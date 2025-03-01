@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using System.Text.RegularExpressions;
 namespace WpfApp1
 {
     /// <summary>
@@ -30,9 +30,9 @@ namespace WpfApp1
         {
             bool ok = false;
             int times = 0;
-            var names= txt_name.Text.Split('，');
-            var changes = txt_change.Text.Split("+");
-            var reasons = txt_reason.Text.Split("，");
+            var names = Regex.Split(txt_name.Text, @"\s");
+            var changes = Regex.Split(txt_change.Text, @"\s");
+            var reasons = Regex.Split(txt_reason.Text, @"\s");
             AllGroup ag = new AllGroup();
             
                 foreach (var group in ag.Groups)
@@ -45,7 +45,7 @@ namespace WpfApp1
                         {
                             for(int i = 0; i < changes.Length; i++) {
                                 student.change = float.Parse(changes[i]);
-                                student.reason = reasons[i];
+                                student.reason = (i<reasons.Length)?reasons[i]:"";
                                 student.ChangeScore();
                             }
                             times++;

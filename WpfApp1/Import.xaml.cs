@@ -65,11 +65,9 @@ namespace WpfApp1
             {
                 var s = openFileDialog.FileName.Split('.');
 
-                Exam si = new Exam(openFileDialog.FileName, false, 0, s[1] == "xlsx", s[1] == "docx");
+                var si = new Information(openFileDialog.FileName, false, 0, s[1] == "xlsx", s[1] == "docx");
                 si.Owner = this;
                 si.ShowDialog();
-
-
 
             }
         }
